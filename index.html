@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Corner - Кофейня</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans">
+    <!-- Навигация -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-serif font-bold text-amber-900">Coffee Corner</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-amber-700 transition-colors">Главная</a>
+                    <a href="#menu" class="text-gray-700 hover:text-amber-700 transition-colors">Меню</a>
+                    <a href="#about" class="text-gray-700 hover:text-amber-700 transition-colors">О нас</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-amber-700 transition-colors">Галерея</a>
+                    <a href="#contact" class="text-gray-700 hover:text-amber-700 transition-colors">Контакты</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-amber-700">Главная</a>
+                <a href="#menu" class="block text-gray-700 hover:text-amber-700">Меню</a>
+                <a href="#about" class="block text-gray-700 hover:text-amber-700">О нас</a>
+                <a href="#gallery" class="block text-gray-700 hover:text-amber-700">Галерея</a>
+                <a href="#contact" class="block text-gray-700 hover:text-amber-700">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center" style="background-image: url('image/фон.webp'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6">Кофе, который хочется пить каждый день</h2>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 font-light">Уютная кофейня в сердце Краснодара</p>
+            <a href="#contact" class="inline-block bg-amber-700 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-amber-800 transition-colors shadow-lg">
+                Забронировать столик
+            </a>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-4">Почему выбирают нас</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Мы создали идеальное место для вашего кофе и отдыха</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-amber-900 mb-2">Свежеобжаренный кофе</h3>
+                    <p class="text-gray-600 text-sm">Обжариваем зерно ежедневно</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-amber-900 mb-2">Собственная выпечка</h3>
+                    <p class="text-gray-600 text-sm">Печём каждый день</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-amber-900 mb-2">Бесплатный Wi-Fi</h3>
+                    <p class="text-gray-600 text-sm">Быстрый интернет</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-amber-900 mb-2">Место для работы</h3>
+                    <p class="text-gray-600 text-sm">Удобные столы и розетки</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-amber-900 mb-2">Парковка</h3>
+                    <p class="text-gray-600 text-sm">Бесплатная парковка</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные напитки -->
+    <section class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-4">Популярные напитки</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Наши хиты, которые любят гости</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-900 mb-2">Капучино</h3>
+                    <p class="text-amber-700 font-bold text-2xl">250 ₽</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-900 mb-2">Латте</h3>
+                    <p class="text-amber-700 font-bold text-2xl">290 ₽</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-900 mb-2">Раф</h3>
+                    <p class="text-amber-700 font-bold text-2xl">340 ₽</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-10 h-10 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-amber-900 mb-2">Американо</h3>
+                    <p class="text-amber-700 font-bold text-2xl">190 ₽</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-4">Отзывы гостей</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Что говорят наши постоянные клиенты</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-amber-500">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Лучший капучино в городе! Прихожу каждое утро перед работой. Атмосфера просто чудесная."</p>
+                    <p class="font-semibold text-amber-900">Анна К.</p>
+                </div>
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-amber-500">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Отличное место для работы! Wi-Fi быстрый, кофе вкусный, персонал дружелюбный. Рекомендую!"</p>
+                    <p class="font-semibold text-amber-900">Дмитрий М.</p>
+                </div>
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-amber-500">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Выпечка просто невероятная! Круассаны тают во рту. Теперь это моё любимое место для завтрака."</p>
+                    <p class="font-semibold text-amber-900">Елена В.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-6">О нашей кофейне</h2>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        Coffee Corner — это уютная кофейня в центре Краснодара, где мы работаем с 2021 года. 
+                        Мы верим, что хороший кофе может сделать каждый день немного лучше.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                        Мы используем только качественное зерно от лучших поставщиков и обжариваем его самостоятельно, 
+                        чтобы вы могли насладиться идеальным вкусом. Ежедневно наша пекарня готовит свежую выпечку, 
+                        которая идеально дополняет наш кофе.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <p class="text-4xl font-serif font-bold text-amber-700">5+</p>
+                            <p class="text-gray-600">лет работы</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl font-serif font-bold text-amber-700">50+</p>
+                            <p class="text-gray-600">видов кофе</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl font-serif font-bold text-amber-700">15K+</p>
+                            <p class="text-gray-600">гостей</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-serif font-semibold text-amber-900 mb-6">Наши принципы</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Качественное зерно от проверенных поставщиков</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Собственная обжарка зерна</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Свежая выпечка каждый день</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Дружелюбная атмосфера</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Уважение к каждому гостю</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section id="menu" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-4">Наше меню</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Откройте для себя вкусы Coffee Corner</p>
+            </div>
+            
+            <!-- Кофе -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-semibold text-amber-900 mb-8 text-center">Кофе</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Эспрессо</h4>
+                            <p class="text-gray-600 text-sm">Классический итальянский</p>
+                        </div>
+                        <p class="font-bold text-amber-700">150 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Капучино</h4>
+                            <p class="text-gray-600 text-sm">Кофе с молочной пенкой</p>
+                        </div>
+                        <p class="font-bold text-amber-700">250 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Латте</h4>
+                            <p class="text-gray-600 text-sm">Мягкий кофе с молоком</p>
+                        </div>
+                        <p class="font-bold text-amber-700">290 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Раф</h4>
+                            <p class="text-gray-600 text-sm">Кофе со сливками</p>
+                        </div>
+                        <p class="font-bold text-amber-700">340 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Американо</h4>
+                            <p class="text-gray-600 text-sm">Кофе разбавленный водой</p>
+                        </div>
+                        <p class="font-bold text-amber-700">190 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Флэт уайт</h4>
+                            <p class="text-gray-600 text-sm">Двойной эспрессо с молоком</p>
+                        </div>
+                        <p class="font-bold text-amber-700">280 ₽</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Чай -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-semibold text-amber-900 mb-8 text-center">Чай</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Чёрный чай</h4>
+                            <p class="text-gray-600 text-sm">Классический цейлонский</p>
+                        </div>
+                        <p class="font-bold text-amber-700">180 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Зелёный чай</h4>
+                            <p class="text-gray-600 text-sm">Японский сенча</p>
+                        </div>
+                        <p class="font-bold text-amber-700">200 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Ромашковый</h4>
+                            <p class="text-gray-600 text-sm">Успокаивающий травяной</p>
+                        </div>
+                        <p class="font-bold text-amber-700">170 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Иван-чай</h4>
+                            <p class="text-gray-600 text-sm">Русский ферментированный</p>
+                        </div>
+                        <p class="font-bold text-amber-700">220 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Мятный</h4>
+                            <p class="text-gray-600 text-sm">Освежающий</p>
+                        </div>
+                        <p class="font-bold text-amber-700">190 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Каркаде</h4>
+                            <p class="text-gray-600 text-sm">Гибискусовый чай</p>
+                        </div>
+                        <p class="font-bold text-amber-700">180 ₽</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Десерты -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-semibold text-amber-900 mb-8 text-center">Десерты</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Круассан</h4>
+                            <p class="text-gray-600 text-sm">Сливочный французский</p>
+                        </div>
+                        <p class="font-bold text-amber-700">180 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Чизкейк</h4>
+                            <p class="text-gray-600 text-sm">Нью-Йоркский</p>
+                        </div>
+                        <p class="font-bold text-amber-700">320 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Тирамису</h4>
+                            <p class="text-gray-600 text-sm">Итальянский классический</p>
+                        </div>
+                        <p class="font-bold text-amber-700">350 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Маффин</h4>
+                            <p class="text-gray-600 text-sm">Шоколадный</p>
+                        </div>
+                        <p class="font-bold text-amber-700">150 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Брауни</h4>
+                            <p class="text-gray-600 text-sm">Шоколадный с орехами</p>
+                        </div>
+                        <p class="font-bold text-amber-700">220 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Эклер</h4>
+                            <p class="text-gray-600 text-sm">Заварной с кремом</p>
+                        </div>
+                        <p class="font-bold text-amber-700">190 ₽</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Завтраки -->
+            <div>
+                <h3 class="text-2xl font-serif font-semibold text-amber-900 mb-8 text-center">Завтраки</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Авокадо-тост</h4>
+                            <p class="text-gray-600 text-sm">С яйцом пашот</p>
+                        </div>
+                        <p class="font-bold text-amber-700">390 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Омлет</h4>
+                            <p class="text-gray-600 text-sm">С овощами и сыром</p>
+                        </div>
+                        <p class="font-bold text-amber-700">320 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Сэндвич</h4>
+                            <p class="text-gray-600 text-sm">С беконом и сыром</p>
+                        </div>
+                        <p class="font-bold text-amber-700">280 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Гранола</h4>
+                            <p class="text-gray-600 text-sm">С йогуртом и ягодами</p>
+                        </div>
+                        <p class="font-bold text-amber-700">290 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Блины</h4>
+                            <p class="text-gray-600 text-sm">С мёдом и орехами</p>
+                        </div>
+                        <p class="font-bold text-amber-700">250 ₽</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl flex justify-between items-center">
+                        <div>
+                            <h4 class="font-semibold text-amber-900">Сырники</h4>
+                            <p class="text-gray-600 text-sm">Со сметаной</p>
+                        </div>
+                        <p class="font-bold text-amber-700">270 ₽</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-4">Галерея</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Атмосфера Coffee Corner в фотографиях</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                    <img src="image/интерьер.webp" alt="Интерьер кофейни" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                    <img src="image/кофе.webp" alt="Кофе" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                    <img src="image/выпечка.webp" alt="Выпечка" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="aspect-square rounded-2xl overflow-hidden">
+                    <img src="image/гости.webp" alt="Гости" class="w-full h-full object-cover hover:scale-110 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-amber-900 mb-4">Забронировать столик</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">Свяжитесь с нами любым удобным способом</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Контактная информация -->
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif font-semibold text-amber-900 mb-2">Адрес</h3>
+                            <p class="text-gray-700">г. Краснодар, ул. Красная, 145</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif font-semibold text-amber-900 mb-2">Телефон</h3>
+                            <p class="text-gray-700">+7 (918) 555-12-34</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif font-semibold text-amber-900 mb-2">Часы работы</h3>
+                            <p class="text-gray-700">Ежедневно с 08:00 до 22:00</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif font-semibold text-amber-900 mb-2">Email</h3>
+                            <p class="text-gray-700">hello@coffeecorner.ru</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif font-semibold text-amber-900 mb-2">Telegram</h3>
+                            <p class="text-gray-700">@CoffeeCornerKRD</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Форма бронирования -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl">
+                    <form id="booking-form" class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Имя</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all" placeholder="Введите имя">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Телефон</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all" placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Дата</label>
+                                <input type="date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Время</label>
+                                <input type="time" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Количество гостей</label>
+                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all">
+                                <option value="">Выберите количество</option>
+                                <option value="1">1 человек</option>
+                                <option value="2">2 человека</option>
+                                <option value="3">3 человека</option>
+                                <option value="4">4 человека</option>
+                                <option value="5">5 человек</option>
+                                <option value="6+">6+ человек</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-700 text-white py-4 rounded-lg font-medium hover:bg-amber-800 transition-colors shadow-lg">
+                            Забронировать
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg text-center">
+                        Спасибо! Мы получили вашу заявку и скоро свяжемся с вами.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">Coffee Corner</h3>
+                    <p class="text-amber-200">Кофе, который хочется пить каждый день</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Навигация</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-amber-200 hover:text-white transition-colors">Главная</a></li>
+                        <li><a href="#menu" class="text-amber-200 hover:text-white transition-colors">Меню</a></li>
+                        <li><a href="#about" class="text-amber-200 hover:text-white transition-colors">О нас</a></li>
+                        <li><a href="#gallery" class="text-amber-200 hover:text-white transition-colors">Галерея</a></li>
+                        <li><a href="#contact" class="text-amber-200 hover:text-white transition-colors">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+                    <ul class="space-y-2 text-amber-200">
+                        <li>г. Краснодар, ул. Красная, 145</li>
+                        <li>+7 (918) 555-12-34</li>
+                        <li>hello@coffeecorner.ru</li>
+                        <li>@CoffeeCornerKRD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-amber-800 mt-8 pt-8 text-center text-amber-200">
+                <p>&​copy; 2026 Coffee Corner. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
